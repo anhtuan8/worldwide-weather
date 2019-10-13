@@ -5,9 +5,38 @@ html {
   color: #222;
 }
 
-/* div,span{
-	border: 1px solid black;
-} */
+table{
+  font-family: Fira Sans, sans-serif;
+  font-size: large;
+  margin-top: 2rem;
+}
+
+table .temp-text{
+  font-size: 2rem;
+}
+
+td,th{
+  border: 1px solid;
+  text-align: center !important;
+  border-color: #dee2e6;
+  border-top-color: rgb(222, 226, 230);
+  border-right-color: rgb(222, 226, 230);
+  border-bottom-color: rgb(222, 226, 230);
+  border-left-color: rgb(222, 226, 230);
+}
+
+.temp-box > div{
+  display: inline-block;
+}
+
+table .condition{
+  height: 50px;
+  width: 100%;
+  background-image: url("images/cloudy+sunny.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .autocomplete {
   position: relative;
@@ -15,9 +44,8 @@ html {
 }
 
 .autocomplete-items {
+  border-radius: 30px !important;
   position: absolute;
-  border-bottom: none;
-  border-top: none;
   z-index: 99;
   /*position the autocomplete items to be the same width as the container:*/
   top: 120%;
@@ -50,6 +78,18 @@ html {
   background-color: #363f5a;
   color: white;
 }
+
+.autocomplete-items .first{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.autocomplete-items .last{
+  border-bottom: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: #363f5a !important;
@@ -124,6 +164,15 @@ html {
   height: 30px;
 }
 
+.anchor-button{
+  color: white;
+}
+
+.anchor-button:hover{
+  background-color: #363f5a !important;
+  color: white;
+}
+
 .button-container {
   background-color: #097384;
   border-radius: 30px;
@@ -160,8 +209,25 @@ html {
   padding: 0 !important;
 }
 
-.dark {
-  background-color: #343a40;
+.loc-card{
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1rem 0;
+  background-image: url("images/card_img_1.jpg");
+}
+
+.dropdown-menu{
+  background-color: #097384 !important;
+}
+
+.dropdown-menu > .dropdown-item{
+  color: white;
+}
+
+.dropdown-menu:hover{
+  color: #343a40 !important;
 }
 
 .location-text{
@@ -263,6 +329,10 @@ hr.light {
   margin: 0;
 }
 
+#dropdownMenuButton:hover > i{
+  color: #343a40 !important;
+}
+
 #_search {
   padding: 50px;
 }
@@ -273,21 +343,28 @@ hr.light {
   text-align: center;
   margin: 0% !important;
   padding: 0% !important;
+  font-family: Fira Sans, sans-serif;
 }
 
 #temp {
-  font-size: 2.1rem;
+  font-size: 5rem;
   margin-bottom: 5px;
 }
 
+#map{
+  margin: 0 auto;
+  display: block;
+}
+
+h2 {
+  text-align: center;
+}
 
 /* slideshow style */
 .slideshow {
   box-sizing:border-box;
 }
-h2 {
-  text-align: center;
-}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 100%;

@@ -36,7 +36,7 @@
     <!-- W3Schools css -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <!-- Open weather map -->
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Google font -->
@@ -48,16 +48,23 @@
       href="https://fonts.googleapis.com/css?family=Fira+Sans:300&display=swap"
       rel="stylesheet"
     />
+    <!--Online JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <title>Weather Map</title>
   </head>
 
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light sticky-top border-bottom"
+    >
       <a class="navbar-brand nav-item" href="#"
         ><img class="logo" src="images/ww_thumbnail.png"
       /></a>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!--Home button-->
         <a class="navbar-brand nav-item" href="#">
           <div class="navbar-nav align-center d-flex justify-content-center">
             <div class="button-container">
@@ -71,9 +78,8 @@
             </div>
           </div>
         </a>
-        <div
-          class="navbar-nav align-center d-flex justify-content-center nav-item"
-        >
+        <!--Search form-->
+        <div class="navbar-nav justify-content-center nav-item">
           <div class="searchbar autocomplete button-container">
             <input
               class="search_input pl-4"
@@ -105,7 +111,10 @@
         >
           <i class="fas fa-cog btn-cog"></i>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div
+          class="dropdown-menu dropdown-menu-right"
+          aria-labelledby="dropdownMenuButton"
+        >
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <a class="dropdown-item" href="#">Something else here</a>
@@ -114,14 +123,14 @@
     </nav>
 
     <!-- Weather Bar -->
-    <div class="container-fluid weather-bar">
+    <div class="container-fluid weather-bar border-bottom" id = "_weather-bar">
       <div class="row m-1 justify-content-center">
         <div class="col-sm weather-col">
           <span>
             <img class="icon" src="images/sunny.jpg" />
           </span>
           <span class="location-text">
-            Hà Nội 29℃
+            Hà Nội 29&#176;C
           </span>
         </div>
         <div class="col-sm weather-col">
@@ -129,7 +138,7 @@
             <img class="icon" src="images/gloomy.jpg" />
           </span>
           <span class="location_text">
-            Tokyo 20℃
+            Tokyo 20&#176;C
           </span>
         </div>
         <div class="col-sm weather-col">
@@ -137,7 +146,7 @@
             <img class="icon" src="images/rainy.jpg" />
           </span>
           <span class="location_text">
-            London 23℃
+            London 23&#176;C
           </span>
         </div>
         <div class="col-sm weather-col">
@@ -145,51 +154,64 @@
             <img class="icon" src="images/cloudy+sunny.jpg" />
           </span>
           <span class="location_text">
-            New York 26℃
+            New York 26&#176;C
           </span>
         </div>
       </div>
     </div>
 
-    <!-- Hero -->
-    <div id="hero" class="hero"></div>
-    <div class="hero-text">
-      <h1>Open Weather Map</h1>
-      <p>Global weather forcast results</p>
-    </div>
-
-    <!-- Search form -->
-    <div class="container-fluid" id="_search">
-      <div class="d-flex justify-content-center">
-        <div class="searchbar autocomplete button-container">
-          <input
-            class="search_input pl-4"
-            id="search2"
-            type="text"
-            name=""
-            placeholder="Enter location..."
-            required
-          />
-          <button
-            type="button"
-            id="search_button"
-            class="button_icon btn btn-default"
-            onclick="_forecast('search2')"
-          >
-            <i class="fas fa-search"></i>
-          </button>
+    <!--Weather result-->
+    <div class="result container-fluid mt-5 border-bottom">
+      <div class="row m-1">
+        <div class="col-sm-4">
+          <ul id="weather"></ul>
+          <table class="table">
+            <thead class="thead-light align-items-center">
+              <tr>
+                <th>5h</th>
+                <th>10h</th>
+                <th>15h</th>
+              </tr>
+            </thead>
+            <tbody class="align-items-center">
+              <tr>
+                <td class="temp-text">
+                  <div>26&#176;C</div>
+                  <div class="condition"></div>
+                </td>
+                <td class="temp-text">
+                  <div>26&#176;C</div>
+                  <div class="condition"></div>
+                </td>
+                <td class="temp-text">
+                  <div>26&#176;C</div>
+                  <div class="condition"></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-6 align-items-center">
+          <img src="" id="map" />
+        </div>
+        <div class="col-sm-2">
+          <div class="location-image d-flex flex-column">
+            <div class="bd-highlight">
+              <div class="loc-card image-1"></div>
+            </div>
+            <div class="pt-3 pb-3 bd-highlight">
+              <div class="loc-card image-1"></div>
+            </div>
+            <div class="bd-highlight">
+              <div class="loc-card image-1"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Result -->
-    <div class="result">
-      <ul id="weather"></ul>
-    </div>
-    <br /><br />
-
     <!-- Top destinations -->
-    <div class="container-fluid padding mb-4" id="des">
+    <div class="container-fluid padding mb-5 mt-5" id="des">
       <div class="row welcome text-center">
         <div class="col-12">
           <h1 class="display-4">Top Destinations</h1>
@@ -205,11 +227,7 @@
       <div class="row padding ml-5 mr-5 border-top pt-4">
         <div class="col-md-4">
           <div class="card fade">
-            <img
-              class="card-img-top"
-              src="images/e743ad07cb4622187b57.jpg"
-              width="100%"
-            />
+            <img class="card-img-top" src="images/pho_co.jpg" width="100%" />
             <div class="card-body">
               <h4 class="card-title">Hanoi Old Quarters</h4>
               <p class="card-text">
@@ -219,7 +237,7 @@
               </p>
               <a
                 href="https://www.tripadvisor.com.vn/Attraction_Review-g293924-d317503-Reviews-Old_Quarter-Hanoi.html"
-                class="btn btn-outline-secondary"
+                class="btn button-container anchor-button"
                 >See more</a
               >
             </div>
@@ -228,7 +246,7 @@
 
         <div class="col-md-4">
           <div class="card fade">
-            <img class="card-img-top" src="images/van-mieu-mon.jpg" />
+            <img class="card-img-top" src="images/van_mieu.jpg" />
             <div class="card-body">
               <h4 class="card-title">The Temple of Literature</h4>
               <p class="card-text">
@@ -238,7 +256,7 @@
               </p>
               <a
                 href="https://www.tripadvisor.com.vn/Attraction_Review-g293924-d311083-Reviews-Temple_of_Literature_National_University-Hanoi.html"
-                class="btn btn-outline-secondary"
+                class="btn button-container anchor-button"
                 >See more</a
               >
             </div>
@@ -247,18 +265,20 @@
 
         <div class="col-md-4">
           <div class="card fade">
-            <img class="card-img-top" src="images/Dan_toc_hoc_1.jpg" />
+            <img class="card-img-top" src="images/bao_tang.jpg" />
             <div class="card-body">
               <h4 class="card-title">Vietnam Museum of Ethnology</h4>
               <p class="card-text">
-                The Vietnam Museum of Ethnology is a museum in Hanoi, Vietnam, which focuses on
-                the 54 officially recognised ethnic groups in Vietnam
+                The Vietnam Museum of Ethnology is a museum in Hanoi, Vietnam,
+                which focuses on the 54 officially recognised ethnic groups in
+                Vietnam
               </p>
               <a
                 href="https://www.tripadvisor.com.vn/Attraction_Review-g293924-d447352-Reviews-Vietnam_Museum_of_Ethnology-Hanoi.html"
-                class="btn btn-outline-secondary"
-                >See more</a
+                class="btn button-container anchor-button"
               >
+                See more
+              </a>
             </div>
           </div>
         </div>
@@ -284,7 +304,7 @@
               </p>
               <a
                 href="https://www.tripadvisor.com/Attraction_Review-g14134868-d320634-Reviews-Tokyo_Disneyland-Maihama_Urayasu_Chiba_Prefecture_Kanto.html"
-                class="btn btn-outline-secondary"
+                class="btn button-container anchor-button"
                 >See more</a
               >
             </div>
@@ -303,7 +323,7 @@
               </p>
               <a
                 href="https://www.tripadvisor.com/Attraction_Review-g14111816-d1497822-Reviews-Bamboo_Forest_Street-Ukyo_Kyoto_Kyoto_Prefecture_Kinki.html"
-                class="btn btn-outline-secondary"
+                class="btn button-container anchor-button"
                 >See more</a
               >
             </div>
@@ -322,7 +342,7 @@
               </p>
               <a
                 href="https://www.tripadvisor.com/Attraction_Review-g298102-d321024-Reviews-Mount_Fuji-Chubu.html"
-                class="btn btn-outline-secondary"
+                class="btn button-container anchor-button"
                 >See more</a
               >
             </div>
@@ -388,7 +408,8 @@
           });
         });
         autocomplete(document.getElementById("abc"), cityList);
-        autocomplete(document.getElementById("search2"), cityList);
+        getWeather("Ha Noi");
+        // autocomplete(document.getElementById("search2"), cityList);
       });
 
       function autocomplete(inp, arr) {
@@ -416,9 +437,6 @@
           this.parentNode.appendChild(a);
           /*for each item in the array...*/
           for (i = 0; i < arr.length; i++) {
-            if (count == 7) {
-              break;
-            }
             /*check if the item starts with the same letters as the text field value:*/
             if (
               arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
@@ -443,8 +461,15 @@
               b.setAttribute("onclick", func);
               a.appendChild(b);
               count++;
+              if (count == 7) {
+                break;
+              }
             }
           }
+          var first = a.firstChild;
+          first.classList.add("first");
+          var last = a.lastChild;
+          last.classList.add("last");
         });
         /*execute a function presses a key on the keyboard:*/
         inp.addEventListener("keydown", function(e) {
