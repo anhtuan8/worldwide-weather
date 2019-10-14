@@ -191,12 +191,12 @@ ul {
     width: 100%;
     padding: 10px 5px;
     border: none;
-    background-color: chartreuse;
+    background-color:rgb(74, 75, 73);
     color: white;
     font-size: 1.5em;
   }
   .details:hover{
-    background-color:rgb(255, 174, 0);
+    background-color:rgb(32, 32, 32);
     cursor: pointer;
   }
 .thanhhoa-weather,.nghean-weather,.hanam-weather,.namdinh-weather,.hatinh-weather{
@@ -207,10 +207,10 @@ ul {
   background-repeat: no-repeat;
   
 }
-.item:hover{
+/* .item:hover{
   border: 3px solid red;
   opacity: 1;
-}
+} */
 
 .thanhhoa-weather{
   background-image: url('images/thanhhoa.jpg');
@@ -244,10 +244,10 @@ ul {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
-  background-color: #0c1229;
+  background-color: rgb(74, 75, 73);
 }
 .item-title-row li:hover{
-  opacity: 0.7;
+  background-color: rgb(32, 32, 32);
   
 }
 .item-title-row li:hover .div70{
