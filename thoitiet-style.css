@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img.weather-icon {
+  margin-bottom: 10px;
+}
+
+.history-avg {
+  clear: both;
+}
+
+.high {
+  float: left;
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.low {
+  transform: translateY(20px);
+  margin-bottom: 34px;
+}
+
+.date {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+th {
+  width: 14%;
+  text-align: center;
+}
+
+td{
+  -webkit-transition: background-color 0.4s ease-out;
+  -moz-transition: background-color 0.4s ease-out;
+  -o-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
+}
+
+td:hover{
+  background-color: rgb(222, 226, 230); 
+}
+
+td.active {
+  border-bottom: 6px solid red;
+}
+td.xuongdong {
+  clear: both;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  color: #222;
+}
+
+table{
+  font-family: Fira Sans, sans-serif;
+  font-size: large;
+  margin-top: 2rem;
+}
+
+td,th{
+  border: 1px solid;
+  text-align: center !important;
+  border-color: #dee2e6;
+  border-top-color: rgb(222, 226, 230);
+  border-right-color: rgb(222, 226, 230);
+  border-bottom-color: rgb(222, 226, 230);
+  border-left-color: rgb(222, 226, 230);
+}
+
+a{
+    color:white;
+}
+
+.navbar {
+  padding: 0.8rem;
+  padding-left: 2rem !important;
+}
+
+.navbar-brand{
+	padding-left: 0px !important;
+	margin-left: 0% !important;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  font-size: 1.1rem !important;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand{
+  background-image: url("images/logo_white.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  height: 30px;
+}
+
+.mode-bar{
+  background-color: #097384;
+  color: white;
+}
+
+.mode-text{
+  font-family: Fira Sans, sans-serif;
+  font-size: larger !important;
+}
+
+.mode-text:hover{
+  color: white !important;
+}
+
+.button{
+  width: 35%;
+  background-color: #dedede ;
+  color: black;
+  font-size: large !important;
+  border-radius: 30px !important;
+}
+
+.button:hover{
+  background-color: #363f5a !important;
+  color: white;
+}
+
+.anchor-button{
+  color: white;
+}
+
+.anchor-button:hover{
+  background-color: #363f5a !important;
+  color: white;
+}
+
+.button-container {
+  background-color: #097384;
+  border-radius: 30px;
+}
+
+.button-container:hover > .button_icon {
+  background: #363f5a !important;
+  /* color: #e74c3c; */
+  color: white;
+}
+
+.button_icon {
+  height: 40px;
+  width: 40px;
+  padding: 0% !important;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% !important;
+  color: white;
+  background-color: inherit;
+}
+
+.btn-cog{
+  font-size: 30px;
+  color: #097384;
+}
+
+.btn-secondary{
+  background-color: transparent !important;
+  color: #097384 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.city-time{
+  padding-top: 2rem;
+  font-family: Fira Sans, sans-serif;
+  font-size: large;
+  text-align: center;
+}
+
+.city-name{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.dropdown-menu{
+  background-color: #097384 !important;
+}
+
+.dropdown-menu > .dropdown-item{
+  color: white;
+}
+
+.dropdown-menu:hover{
+  color: #343a40 !important;
+}
+
+.location-text{
+	height: 30px;
+}
+
+.icon{
+	height: 40px;
+}
+
+.weather-col{
+	padding-left: 0px !important;
+}
+
+.heading{
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0.25rem 0;
+  /* padding-bottom: 1rem; */
+}
+
+.row{
+  font-size: small !important;
+}
+
+.weather-bar {
+	padding: 0.3rem;
+	padding-left: 1.7rem !important;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  color: #097384;
+}
+
+footer {
+  background-color: #097384 !important;
+  color: white;
+}
+
+
+footer a {
+  color: white;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  margin: 0;
+}
+
+#dropdownMenuButton:hover > i{
+  color: #343a40 !important;
+}
+
+#_search {
+  padding: 50px;
+}
+
+#weather {
+  color: #222;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0% !important;
+  padding: 0% !important;
+  font-family: Fira Sans, sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+

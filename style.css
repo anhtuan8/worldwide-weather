@@ -164,6 +164,33 @@ table .condition{
   height: 30px;
 }
 
+.mode-bar{
+  background-color: #097384;
+  color: white;
+}
+
+.mode-text{
+  font-family: Fira Sans, sans-serif;
+  font-size: larger !important;
+}
+
+.mode-text:hover{
+  color: white !important;
+}
+
+.button{
+  width: 35%;
+  background-color: #dedede ;
+  color: black;
+  font-size: large !important;
+  border-radius: 30px !important;
+}
+
+.button:hover{
+  background-color: #363f5a !important;
+  color: white;
+}
+
 .anchor-button{
   color: white;
 }
@@ -215,7 +242,18 @@ table .condition{
   background-position: center;
   background-size: cover;
   padding: 1rem 0;
-  background-image: url("images/card_img_1.jpg");
+}
+
+.image-1{
+  background-image: url("images/pho_co.jpg");
+}
+
+.image-2{
+  background-image: url("images/bao_tang.jpg");
+}
+
+.image-3{
+  background-image: url("images/van_mieu.jpg");
 }
 
 .dropdown-menu{
@@ -315,10 +353,15 @@ table .condition{
   color: #097384;
 }
 
+.result{
+  /* background-color: rgb(248, 249, 250) !important; */
+}
+
 footer {
   background-color: #097384 !important;
   color: white;
 }
+
 
 footer a {
   color: white;

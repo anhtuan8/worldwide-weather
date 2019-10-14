@@ -1,6 +1,7 @@
 function _forecast(id) {
   /*var city = document.getElementsById("test");	*/
   var city = document.getElementById(id).value;
+  $("html, body").animate({ scrollTop: document.getElementById('_weather-bar').offsetTop }, "slow");
   getWeather(city);
 }
 
@@ -11,7 +12,6 @@ function getWeather(city) {
       city +
       "&appid=18d8291a40a24cc8d3c7edc80d60a9a2";
     // change the strings after "appid=" to your own application ID.
-    $("html, body").animate({ scrollTop: document.getElementById('_weather-bar').offsetTop }, "slow");
     $.getJSON(url, function(data) {
       cityname = data.name;
       dto = new Date();
