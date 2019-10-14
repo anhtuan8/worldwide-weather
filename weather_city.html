@@ -1,324 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300&display=swap"
+      rel="stylesheet"
+    />
+    <!--Local css and js-->
+    <link rel="stylesheet" href="weather-city-style.css" />
+    <script src="weather-city-script.js"></script>
+    <!--Owl Carousel js and css-->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="owlcarousel/assets/owl.theme.default.min.css"
+    />
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <!--Online js- jquery and boostrap-->
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style_weather_city.css">
-  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="owlcarousel/owl.carousel.min.js"></script>
-
-</head>
-
-<body>
-  <br><br><br>
-  <ul id="nab">
-    <li><a href="">Hiện tại</a></li>
-    <li><a href="">5 ngày</a></li>
-    <li><a href="">10 ngày</a></li>
-    <li><a href="">Tháng</a></li>
-  </ul>
-  <br><br>
-
-  <div class="clear-fix">
-    <div class="weather_info">
-      <div id="city_name">Hà Nội</div>
-      <div style="height: 70%;">
-      <p id="date-now"></p>
-      <p id="date"></p>
-      <p>Nhiệt độ: 28<sup>o</sup>C</p>
-      <p>Độ ẩm: 80%</p>
-      <p>Hiện tại: Nắng nhẹ</p>
-      <img src="images/nang1.png" width="50px" height="50px">
-      <p>Tầm nhìn xa: Khoản 7km</p>
-      <p>Tốc độ gió: 4km/h</p>
-    </div>
-    </div>
-    <div class="map_info" title="Văn Miếu quốc tử giám">
-      <a
-        href="https://www.google.com/maps/place/H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,
-                +Vi%E1%BB%87t+Nam/@21.022736,105.8019441,13z/data=!3m1!4b1!4m5!3m4!1s0x3135ab9bd9861ca1:0xe7887f7b72ca17a9!8m2!3d21.0277644!4d105.8341598">
-        <button class="xem-map">Xem bản đồ</button>
-      </a>
-    </div>
-  </div>
-  <div class="related-location">
-  </div><br><br>
-  <div class="item-title">Một số địa điểm du lịch tại Hà Nội</div>
-  <hr style="width: 80%; background-color: green;">
-  <br><br><br>
-  <div class="owl-carousel owl-theme" id="carousel1">
-    <div class="item">
-      <div title="Hồ Hoàn Kiếm đẹp và lãng mạn ở Hà Nội">
-        <img class="content" src="images/hohk.jpg" height="100%">
-       
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-md navbar-light bg-light sticky-top border-bottom"
+    >
+      <a class="navbar-brand nav-item" href="#"
+        ><img class="logo" src="images/ww_thumbnail.png"
+      /></a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <!--Home button-->
+        <a class="navbar-brand nav-item" href="#">
+          <div class="navbar-nav align-center d-flex justify-content-center">
+            <div class="button-container">
+              <button
+                type="button"
+                id="home_button"
+                class="button_icon btn btn-default align-center"
+              >
+                <i class="fas fa-home"></i>
+              </button>
+            </div>
+          </div>
+        </a>
       </div>
-      <button class="details">Hồ Hoàn Kiếm đẹp và lãng mạn ở Hà Nội</button>
-    </div>
-    <div class="item">
-      <div title="Cầu Thê Húc được ví như một dải lụa đào">
-        <img src="images/cauth.jpg" height="100%">
+      <div class="dropdown navbar-brand nav-item">
+        <button
+          class="btn btn-secondary dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fas fa-cog btn-cog"></i>
+        </button>
+        <div
+          class="dropdown-menu dropdown-menu-right"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
       </div>
-      <button class="details">Cầu Thê Húc được ví như một dải lụa đào</button>
-    </div>
-    <div class="item">
-      <div title="Chùa Một Cột với lối kiến trúc độc đáo, có 1 không 2 ở Hà Nội">
-        <img src="images/chua1c.jpg" height="100%">
-        
+    </nav>
+
+    <!-- Weather Bar -->
+    <div class="container-fluid weather-bar border-bottom" id="_weather-bar">
+      <div class="row m-1 justify-content-center">
+        <div class="col-sm weather-col">
+          <span>
+            <img class="icon" src="images/sunny.jpg" />
+          </span>
+          <span class="location-text">
+            Hà Nội 29&#176;C
+          </span>
+        </div>
+        <div class="col-sm weather-col">
+          <span>
+            <img class="icon" src="images/gloomy.jpg" />
+          </span>
+          <span class="location_text">
+            Tokyo 20&#176;C
+          </span>
+        </div>
+        <div class="col-sm weather-col">
+          <span>
+            <img class="icon" src="images/rainy.jpg" />
+          </span>
+          <span class="location_text">
+            London 23&#176;C
+          </span>
+        </div>
+        <div class="col-sm weather-col">
+          <span>
+            <img class="icon" src="images/cloudy+sunny.jpg" />
+          </span>
+          <span class="location_text">
+            New York 26&#176;C
+          </span>
+        </div>
       </div>
-      <button class="details">Chùa Một Cột với lối kiến trúc độc đáo, có 1 không 2 ở Hà Nội</button>
-    </div>
-    <div class="item">
-      <div title="Khu quảng trường Ba Đình rộng lớn">
-        <img src="images/badinh4.jpg" height="100%">
-        
-      </div>
-      <button class="details">Khu quảng trường Ba Đình rộng lớn</button>
-    </div>
-    <div class="item">
-      <div title="Lăng Bác là nơi uy nghiêm, trang trọng nhất của dân tộc Việt Nam">
-        <img src="images/langct.jpg" height="100%">
-       
-      </div>
-      <button class="details">Lăng Bác là nơi uy nghiêm, trang trọng nhất của dân tộc Việt Nam</button>
     </div>
 
-  </div>
-  </div>
+    <!--Forecast Mode-->
+    <div class="container-fluid mode-bar border-bottom" id="_mode-bar">
+      <div class="row p-2 ml-5">
+        <div class="col-sm-2 mode-col">
+          <a href="/index.html" class="mode-text description">
+            Today
+          </a>
+        </div>
+        <div class="col-sm-2 mode-col">
+          <a href="/thoitiet.html" class="mode-text description">
+            Monthly
+          </a>
+        </div>
+        <div class="col-sm-2 mode-col description">
+          <a href="/weather_city.html" class="mode-text">
+            City details
+          </a>
+        </div>
+      </div>
+    </div>
 
-  <div style="margin: 4em;">
-    <script>
-      $(document).ready(function () {
-        $('.owl-carousel').owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: true,
-          autoplay: true,
-          autoplayTimeout: 2000,
-          autoplayHoverPause: true,
-          responsive: {
-            0: {
-              items: 1,
-              autoplayTimeout: 2000,
-            },
-            600: {
-              items: 2
+    <div class="clear-fix">
+      <div class="weather_info">
+        <div id="city_name">Hà Nội</div>
+        <div style="height: 70%;">
+          <p id="date-now"></p>
+          <p id="date"></p>
+          <p>Nhiệt độ: 28<sup>o</sup>C</p>
+          <p>Độ ẩm: 80%</p>
+          <p>Hiện tại: Nắng nhẹ</p>
+          <img src="images/nang1.png" width="50px" height="50px" />
+          <p>Tầm nhìn xa: Khoản 7km</p>
+          <p>Tốc độ gió: 4km/h</p>
+        </div>
+      </div>
+      <div class="map_info" title="Văn Miếu quốc tử giám">
+        <a
+          href="https://www.google.com/maps/place/H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,
+                +Vi%E1%BB%87t+Nam/@21.022736,105.8019441,13z/data=!3m1!4b1!4m5!3m4!1s0x3135ab9bd9861ca1:0xe7887f7b72ca17a9!8m2!3d21.0277644!4d105.8341598"
+        >
+          <button class="xem-map">Xem bản đồ</button>
+        </a>
+      </div>
+    </div>
+    <div class="related-location"></div>
+    <br /><br />
+    <div class="item-title">Một số địa điểm du lịch tại Hà Nội</div>
+    <hr style="width: 80%; background-color: green;" />
+    <br /><br /><br />
+    <div class="owl-carousel owl-theme" id="carousel1">
+      <div class="item">
+        <div title="Hồ Hoàn Kiếm đẹp và lãng mạn ở Hà Nội">
+          <img class="content" src="images/hohk.jpg" height="100%" />
+        </div>
+        <button class="details">Hồ Hoàn Kiếm đẹp và lãng mạn ở Hà Nội</button>
+      </div>
+      <div class="item">
+        <div title="Cầu Thê Húc được ví như một dải lụa đào">
+          <img src="images/cauth.jpg" height="100%" />
+        </div>
+        <button class="details">Cầu Thê Húc được ví như một dải lụa đào</button>
+      </div>
+      <div class="item">
+        <div
+          title="Chùa Một Cột với lối kiến trúc độc đáo, có 1 không 2 ở Hà Nội"
+        >
+          <img src="images/chua1c.jpg" height="100%" />
+        </div>
+        <button class="details">
+          Chùa Một Cột với lối kiến trúc độc đáo, có 1 không 2 ở Hà Nội
+        </button>
+      </div>
+      <div class="item">
+        <div title="Khu quảng trường Ba Đình rộng lớn">
+          <img src="images/badinh4.jpg" height="100%" />
+        </div>
+        <button class="details">Khu quảng trường Ba Đình rộng lớn</button>
+      </div>
+      <div class="item">
+        <div
+          title="Lăng Bác là nơi uy nghiêm, trang trọng nhất của dân tộc Việt Nam"
+        >
+          <img src="images/langct.jpg" height="100%" />
+        </div>
+        <button class="details">
+          Lăng Bác là nơi uy nghiêm, trang trọng nhất của dân tộc Việt Nam
+        </button>
+      </div>
+    </div>
 
-            },
-            1000: {
-              items: 3
+    <div style="margin: 4em;">
+      <script>
+        $(document).ready(function() {
+          $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+              0: {
+                items: 1,
+                autoplayTimeout: 2000
+              },
+              600: {
+                items: 2
+              },
+              1000: {
+                items: 3
+              }
             }
-          }
-        })
+          });
+        });
+      </script>
 
-      });
-    </script>
+      <br />
+      <div class="clear-fix sticky">
+        <div>
+          <a href="#nab"
+            ><img src="images/top.png" style="width: 100%; height: 60px"
+          /></a>
+        </div>
+      </div>
 
-    <br>
-    <div class="clear-fix sticky">
-      <div>
-        <a href="#nab"><img src="images/top.png" style="width: 100%; height: 60px"></a>
-        
+      <div id="item-title1">
+        <div class="item-title">Thông tin thời tiết nổi bật</div>
+        <hr style="width: 80%; background-color: green;" />
+        <br /><br /><br />
+        <div class="item-title-row">
+          <ul>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/Bao.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Cơn báo số 5 sắp đổ bổ vào biển Đông
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/nang.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Nắng nóng kéo dài tại miền Bắc có thể tới hết tuần
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/bui.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Nồng độ bụi trong không khí tại Thành Phố Hà Nội vượt nhiều
+                  lần tiêu chuẩn thế giới
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/chay.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Cháy rừng do nắng nóng kéo dài tại Tây Nguyên
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="item-title-row clear-fix">
+          <ul>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/lulut.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Lũ lụt lịch sử tại miền trung trong vòng 20 năm qua
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/satdat.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Sạt lở đất nghiêm trọng tại các tỉnh miền núi phía Bắc do mưa
+                  lớn tuần qua
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/lanh.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Miền Bắc chuẩn bị đón đợt không khí lạnh đầu mùa vào cuối tuần
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="images/mattroi.jpg" width="100%" height="100%" />
+                </div>
+                <div class="div70">
+                  Nguyệt thực xuất hiện có thể quan sát được
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <p style="text-align: center; width: 100%; color: brown;">
+        <a href="">Xem thêm</a>
+      </p>
+      <br />
+      <div class="item-title">Thời tiết của một số tỉnh liên quan</div>
+      <hr style="width: 80%; background-color: green;" />
+      <br /><br /><br />
+      <!-- Set up your HTML -->
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="thanhhoa-weather">
+            <p class="content-text">
+              Thanh hóa mưa rông trên diện rộng kèm theo gió lốc
+            </p>
+          </div>
+          <button class="details">Chi tiết thời tiết</button>
+        </div>
+        <div class="item">
+          <div class="nghean-weather">
+            <p class="content-text">
+              Nghệ An nắng nóng kéo dài có khả năng cháy cao
+            </p>
+          </div>
+          <button class="details">Chi tiết thời tiết</button>
+        </div>
+        <div class="item">
+          <div class="namdinh-weather">
+            <p class="content-text">Nam Định nắng nhẹ nhiệt độ tương đối</p>
+          </div>
+          <button class="details">Chi tiết thời tiết</button>
+        </div>
+        <div class="item">
+          <div class="hanam-weather">
+            <p class="content-text">Hà Nam mưa lớn do ảnh hưởng của bão</p>
+          </div>
+          <button class="details">Chi tiết thời tiết</button>
+        </div>
+        <div class="item">
+          <div class="hatinh-weather">
+            <p class="content-text">
+              Hà Tĩnh mưa rông rải rác kèm theo nắng gián đoạn
+            </p>
+          </div>
+          <button class="details">Chi tiết thời tiết</button>
+        </div>
       </div>
     </div>
-   
 
-    <div id="item-title1">
+    <footer class="clear-fix" style="margin-bottom: 1em;">
+      <div class="style-footer">
+        <div class="foot-ter">
+          <div class="div" style="margin: 16px 0;">
+            <img src="images/logo_white.png" alt="logo" height="50px" />
+          </div>
+          <hr />
+          <div class="div11">
+            <p>
+              This is a website for checking weather forcast results of
+              locations all around the world. The features will be updated and
+              developed continuously. If you found this website helpful, please
+              share with your friends!
+            </p>
+          </div>
+        </div>
 
-      <div class="item-title">Thông tin thời tiết nổi bật</div>
-      <hr style="width: 80%; background-color: green;">
-      <br><br><br>
-      <div class="item-title-row">
-        <ul>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/Bao.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Cơn báo số 5 sắp đổ bổ vào biển Đông
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/nang.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Nắng nóng kéo dài tại miền Bắc có thể tới hết tuần
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-
-                <img src="images/bui.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Nồng độ bụi trong không khí tại Thành Phố Hà Nội vượt nhiều lần tiêu chuẩn thế giới
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/chay.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Cháy rừng do nắng nóng kéo dài tại Tây Nguyên
-              </div>
-            </a>
-          </li>
-        </ul>
+        <div class="foot-ter">
+          <div class="div">
+            <p height="100%" style="font-weight: bold; font-size: 1.5em;">
+              Infomation
+            </p>
+          </div>
+          <hr />
+          <div class="div11">
+            <p>Team 22</p>
+            <p>UET, VNU</p>
+            <p>Hanoi VietNam</p>
+          </div>
+        </div>
+        <div class="foot-ter">
+          <div class="div">
+            <p height="100%" style="font-weight: bold; font-size: 1.5em;">
+              Mainfunction
+            </p>
+          </div>
+          <hr />
+          <div class="div11">
+            <p>Weather forecast</p>
+            <p>Weather map</p>
+            <p>Destinations introduction</p>
+          </div>
+        </div>
+        <hr />
+        <div
+          style="height: 30px;text-align: center; padding-top: 0.4em; color: white;"
+        >
+          © openweathermap.org
+        </div>
       </div>
-      <div class="item-title-row clear-fix">
-        <ul>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/lulut.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Lũ lụt lịch sử tại miền trung trong vòng 20 năm qua
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/satdat.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Sạt lở đất nghiêm trọng tại các tỉnh miền núi phía Bắc do mưa lớn tuần qua
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/lanh.jpg" width="100%" height="100%">
-              </div>
-              <div class="div70">
-                Miền Bắc chuẩn bị đón đợt không khí lạnh đầu mùa vào cuối tuần
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" style="height: 100%; width: 100%; padding: 0;">
-              <div class="div30">
-                <img src="images/mattroi.jpg" width="100%" height="100%">
-
-              </div>
-              <div class="div70">
-                Nguyệt thực xuất hiện có thể quan sát được
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <br>
-    <p style="text-align: center; width: 100%; color: brown;" ><a href="">Xem thêm</a></p>
-    <br>
-    <div class="item-title">Thời tiết của một số tỉnh liên quan</div>
-    <hr style="width: 80%; background-color: green;">
-    <br><br><br>
-    <!-- Set up your HTML -->
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="thanhhoa-weather">
-          <p class="content-text">Thanh hóa mưa rông trên diện rộng kèm theo gió lốc </p>
-        </div>
-        <button class="details">Chi tiết thời tiết</button>
-      </div>
-      <div class="item">
-        <div class="nghean-weather">
-          <p class="content-text">Nghệ An nắng nóng kéo dài có khả năng cháy cao </p>
-        </div>
-        <button class="details">Chi tiết thời tiết</button>
-      </div>
-      <div class="item">
-        <div class="namdinh-weather">
-          <p class="content-text">Nam Định nắng nhẹ nhiệt độ tương đối </p>
-        </div>
-        <button class="details">Chi tiết thời tiết</button>
-      </div>
-      <div class="item">
-        <div class="hanam-weather">
-          <p class="content-text">Hà Nam mưa lớn do ảnh hưởng của bão</p>
-        </div>
-        <button class="details">Chi tiết thời tiết</button>
-      </div>
-      <div class="item">
-        <div class="hatinh-weather">
-          <p class="content-text">Hà Tĩnh mưa rông rải rác kèm theo nắng gián đoạn </p>
-        </div>
-        <button class="details">Chi tiết thời tiết</button>
-      </div>
-
-    </div>
-  </div>
-  </div>
-  <footer class="clear-fix" style="margin-bottom: 1em;">
-
-    <div class="style-footer">
-      <div class="foot-ter">
-        <div class="div" style="margin: 16px 0;">
-          <img src="images/logo_white.png" alt="logo" height="50px">
-
-        </div>
-        <hr>
-        <div class="div11">
-          <p>This is a website for checking weather forcast results of locations all around the world.
-            The features will be updated and developed continuously. If you found this website helpful,
-            please share with your friends!</p>
-        </div>
-
-      </div>
-
-
-      <div class='foot-ter'>
-        <div class="div">
-          <p height="100%" style="font-weight: bold; font-size: 1.5em;">Infomation</p>
-        </div>
-        <hr>
-        <div class="div11">
-          <p>Team 22</p>
-          <p>UET, VNU</p>
-          <p>Hanoi VietNam</p>
-        </div>
-
-      </div>
-      <div class="foot-ter">
-        <div class="div">
-          <p height="100%" style="font-weight: bold; font-size: 1.5em;">Mainfunction</p>
-        </div>
-        <hr>
-        <div class="div11">
-          <p>Weather forecast</p>
-          <p>Weather map</p>
-          <p>Destinations introduction</p>
-        </div>
-
-      </div>
-      <hr>
-      <div style="height: 30px;text-align: center; padding-top: 0.4em; color: white;">© openweathermap.org</div>
-    </div>
-  </footer>
-
-
-
-  </div>
-  <script src="js-weather-city.js">
-  </script>
-</body>
-
+    </footer>
+  </body>
 </html>
