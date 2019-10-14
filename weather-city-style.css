@@ -1,17 +1,13 @@
 *{
   box-sizing: border-box;
 }
-body{
-  width: 90%;
-  margin: auto;
-  background-color: rgb(233, 178, 178);
-}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    /* background-color: #333; */
   }
   
   li {
@@ -40,8 +36,13 @@ ul {
   .xem-map{
     position: absolute;
     padding: 5px;
-    background-color: #cbdb3b;
+    width: 15%;
+    color: white;
+    font-family: Fira Sans, sans-serif;
+    font-size: large;
+    background-color: #097384;
     border: none;
+    border-radius: 10px;
     top: 1em;
     right: 1em;
     cursor: pointer;
@@ -51,29 +52,26 @@ ul {
     
   }
   .xem-map:hover{
-    background-color: #db533b;
+    background-color: #343a40;
   }
   #carousel1 .item div{
     height: 250px;
     border: 1px solid yellow;
   }
   
-  .weather_info{
+  /* .weather_info{
       float: left;
       width: 48%;
       background-image: linear-gradient(#3b5bdb,#59b6e6);
       height: 500px;
       color: aliceblue;
      text-align: center;
-  }
+  } */
   .map_info{
-    position: relative;
-    float: left;
-    margin-left: 4%;
-    width: 48%;
     height: 500px;
     background-image: url('images/van-mieu-mon.jpg');
-    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   #city_name{
      padding: 12px 0;
@@ -271,10 +269,7 @@ ul {
   height: 100%;
 }
 
-/*
- Tuan 
-*/
-
+/*Tuan*/
 
 td{
   -webkit-transition: background-color 0.4s ease-out;
@@ -287,7 +282,7 @@ td:hover{
   background-color: rgb(222, 226, 230); 
 }
 
-a{
+.mode-col>a{
     color:white;
 }
 
@@ -336,7 +331,8 @@ a{
 }
 
 .button{
-  width: 35%;
+  width: 12%;
+  padding: 15px;
   background-color: #dedede ;
   color: black;
   font-size: large !important;
@@ -443,6 +439,10 @@ a{
   font-size: small !important;
 }
 
+.weather{
+  background-color: whitesmoke;
+}
+
 .weather-bar {
 	padding: 0.3rem;
 	padding-left: 1.7rem !important;
@@ -486,4 +486,13 @@ hr.light {
 
 h2 {
   text-align: center;
+}
+
+#temp {
+  font-size: 5rem;
+  margin-bottom: 5px;
+}
+
+.temp-box > div{
+  display: inline-block;
 }
