@@ -43,7 +43,6 @@ function getWeather(city) {
         "<div class='max-temp'><i class = 'fa fa-thermometer-full'></i> Max Temperature: " + temp_max + "&#176;C";
       htmltext +=
         "<div class='min-temp'><i class = 'fa fa-thermometer-empty'></i> Min Temperature: " + temp_min + "&#176;C";
-      htmltext += "<div>Next 15 hours: </div>"
       htmltext += "</div>";
       htmltext += "</div>";
 

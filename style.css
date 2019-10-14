@@ -344,6 +344,17 @@ table .condition{
   margin-bottom: 1rem;
 }
 
+.weather-board{
+  background-image: linear-gradient(to bottom, #097384,#0eb7d1);
+  color: white !important;
+}
+
+.city-name {
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+}
+
 .weather-bar {
 	padding: 0.3rem;
 	padding-left: 1.7rem !important;
@@ -381,7 +392,7 @@ hr.light {
 }
 
 #weather {
-  color: #222;
+  color: white;
   font-size: 1.1rem;
   text-align: center;
   margin: 0% !important;
