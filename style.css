@@ -44,6 +44,7 @@ table .condition{
 }
 
 .autocomplete-items {
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
   border-radius: 30px !important;
   position: absolute;
   z-index: 99;
@@ -362,10 +363,6 @@ table .condition{
   font-family: "Fira Sans", sans-serif;
   font-weight: bold;
   color: #097384;
-}
-
-.result{
-  /* background-color: rgb(248, 249, 250) !important; */
 }
 
 footer {

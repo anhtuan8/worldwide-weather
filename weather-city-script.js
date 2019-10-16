@@ -45,7 +45,7 @@ function getWeather(city) {
         htmltext += "</div>";
         htmltext += "</div>";
   
-        var domwinfo = document.getElementById("weather");
+        var domwinfo = document.getElementById("_weather");
         domwinfo.innerHTML = htmltext;
       });
     });

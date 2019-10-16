@@ -1,7 +1,10 @@
 function _forecast(id) {
   /*var city = document.getElementsById("test");	*/
   var city = document.getElementById(id).value;
-  $("html, body").animate({ scrollTop: document.getElementById('_weather-bar').offsetTop }, "slow");
+  $("html, body").animate(
+    { scrollTop: document.getElementById("_weather-bar").offsetTop + document.getElementById("_weather-bar").offsetHeight},
+    "slow"
+  );
   getWeather(city);
 }
 
@@ -32,31 +35,56 @@ function getWeather(city) {
       htmltext += "<div>";
       htmltext += "<div class='city-name'>" + cityname + "</div>";
       htmltext += "<div class='time'>" + dto + "</div>";
-      htmltext += "<div class = 'temp-box d-flex align-items-center justify-content-center'>";
-      htmltext += "<div><img src='http://openweathermap.org/img/wn/" +icon+ "@2x.png'> </div>"
+      htmltext +=
+        "<div class = 'temp-box d-flex align-items-center justify-content-center'>";
+      htmltext +=
+        "<div><img src='http://openweathermap.org/img/wn/" +
+        icon +
+        "@2x.png'> </div>";
       htmltext += '<div id="temp">' + temp + "&#176;C" + "</div>";
       htmltext += "</div>";
       htmltext += "<div class='info'>";
       htmltext += "<div class='weather'>Weather: " + weather;
       htmltext += "<div class='climate'>Climate: " + temperature;
       htmltext +=
-        "<div class='max-temp'><i class = 'fa fa-thermometer-full'></i> Max Temperature: " + temp_max + "&#176;C";
+        "<div class='max-temp'><i class = 'fa fa-thermometer-full'></i> Max Temperature: " +
+        temp_max +
+        "&#176;C";
       htmltext +=
-        "<div class='min-temp'><i class = 'fa fa-thermometer-empty'></i> Min Temperature: " + temp_min + "&#176;C";
+        "<div class='min-temp'><i class = 'fa fa-thermometer-empty'></i> Min Temperature: " +
+        temp_min +
+        "&#176;C";
       htmltext += "</div>";
       htmltext += "</div>";
 
       var domwinfo = document.getElementById("weather");
       domwinfo.innerHTML = htmltext;
+      getMap(parseFloat(data.coord.lon), parseFloat(data.coord.lat),9);
     });
-    const here = {
-      id: "4yxqwed7iWEMlvvWych1",
-      code: "hKoMfypKGNLvNlMFf5AA6w"
-    };
-    const style = "reduced.day";
-
-    const hereTileUrl = `https://2.base.maps.api.here.com/maptile/2.1/maptile/newest/${style}/9/406/225/512/png8?app_id=${here.id}&app_code=${here.code}&ppi=320`;
-
-    document.getElementById('map').setAttribute('src',hereTileUrl);
   });
+}
+
+function getMap(lon, lat,zoom) {
+  var 
+    z = zoom, // Zoom level
+    latRad,
+    n,
+    xTile,
+    yTile;
+
+  latRad = (lat * Math.PI) / 180;
+  n = Math.pow(2, z);
+  xTile = parseInt(n * ((lon + 180) / 360));
+  yTile = parseInt(
+    (n * (1 - Math.log(Math.tan(latRad) + 1 / Math.cos(latRad)) / Math.PI)) / 2
+  );
+  const here = {
+    id: "4yxqwed7iWEMlvvWych1",
+    code: "hKoMfypKGNLvNlMFf5AA6w"
+  };
+  const style = "reduced.day";
+
+  const hereTileUrl = `https://2.base.maps.api.here.com/maptile/2.1/maptile/newest/${style}/${z}/${xTile}/${yTile}/512/png8?app_id=${here.id}&app_code=${here.code}&ppi=320`;
+
+  document.getElementById("map").setAttribute("src", hereTileUrl);
 }
