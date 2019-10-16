@@ -303,6 +303,10 @@ table .condition{
   /* padding-bottom: 1rem; */
 }
 
+.now{
+  border-bottom: 2px white solid;
+}
+
 .search_input {
   color: white;
   border: 0;
