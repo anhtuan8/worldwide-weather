@@ -159,8 +159,6 @@ li a {
   /* top: 0;
     right: 0; */
   opacity: 0;
-  transition-delay: 0.8s;
-  transition-duration: 0.0001s;
   width: 20%;
   border: 2px solid #d5d5d5;
   font-weight: bold;
@@ -169,18 +167,20 @@ li a {
   font-size: 0.7em;
   animation-name: example;
   animation-duration: 1s;
-  animation-iteration-count: inherit;
+  animation-iteration-count: infinite;
+  animation-fill-mode: unset;
+  font-size: 1em;
 }
 @keyframes example {
   0% {
     background-color: #a4c707;
   }
   50% {
-    transform: translateY(-1px);
+    background-color: #1d13a5;
   }
   100% {
-    background-color: #5a6d04;
-    transform: translateY(1px);
+    background-color: #dab40e;
+    
   }
 }
 .map_info {
@@ -244,6 +244,23 @@ li a {
   float: left;
   margin-right: 1%;
 }
+@media only screen and (max-width: 500px) {
+  .item-title-row .div70 {
+    font-size: 0.7em;
+  }
+  
+}
+@media only screen and (max-width: 1200px){
+  .item-title-row .div70 {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 1400px){
+  .item-title-row .div70 {
+    font-size: 1em;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .foot-ter {
     float: none;
@@ -375,7 +392,7 @@ li a {
   height: 200px;
   margin-bottom: 10px;
   /* background-color: rgb(119, 115, 115); */
-  background-image: linear-gradient(rgb(212, 223, 208), rgb(116, 126, 117));
+  background-color: #7a7d88;
   font-family: Fira Sans, sans-serif;
 }
 .item-title-row li:hover {
@@ -636,6 +653,7 @@ h2 {
 .botom-title {
   width: 80%;
   background-color: #097384;
+  height: 2px;
 }
 .under {
   background-color: #097384;
