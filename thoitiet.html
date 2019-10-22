@@ -127,21 +127,43 @@
 
     <!--Forecast Mode-->
     <div class="container-fluid mode-bar border-bottom" id="_mode-bar">
-      <div class="row p-2 ml-5">
-        <div class="col-sm-2 mode-col">
+      <div class="row">
+        <div class="col-sm-2 mode-col p-2 mr-1 onduty">
           <a href="/index.html" class="mode-text description">
             Today
           </a>
         </div>
-        <div class="col-sm-2 mode-col">
-          <a href="/thoitiet.html" class="mode-text description now">
+        <div class="col-sm-2 mode-col p-2 mr-1">
+          <a href="/thoitiet.html" class="mode-text description">
             Monthly
           </a>
         </div>
-        <div class="col-sm-2 mode-col description">
+        <div class="col-sm-2 mode-col p-2 mr-1">
           <a href="/weather_city.html" class="mode-text">
             City details
           </a>
+        </div>
+        <div class="col-sm-2 mode-col p-2 mr-1 dropdown">
+          <button class="dropbtn mode-text p-0">
+            Other cities &nbsp<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content mode-text">
+            <a href="#" class="pt-2 pb-2">Tokyo</a>
+            <a href="#" class="pt-2 pb-2">London</a>
+            <a href="#" class="pt-2 pb-2">Bangkok</a>
+            <a href="#" class="pt-2 pb-2">...</a>
+          </div>
+        </div>
+        <div class="col-sm-2 mode-col p-2 mr-1 dropdown">
+          <button class="dropbtn mode-text p-0">
+            About &nbsp<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content mode-text">
+            <a href="#" class="pt-2 pb-2">World weather</a>
+            <a href="#" class="pt-2 pb-2">Tourist attraction</a>
+            <a href="#" class="pt-2 pb-2">Outstanding weather</a>
+            <a href="#" class="pt-2 pb-2">...</a>
+          </div>
         </div>
       </div>
     </div>

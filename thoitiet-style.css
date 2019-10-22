@@ -299,3 +299,80 @@ h2 {
   text-align: center;
 }
 
+/*-----forecast mode style------*/
+.mode-bar {
+  background-color: #097384;
+  color: white;
+}
+
+.onduty {
+  background-color: #363f5a;
+}
+
+.mode-col {
+  text-align: center;
+}
+
+.mode-col a {
+  color: white !important;
+}
+
+.mode-col:hover {
+  background-color: #363f5a;
+  cursor: pointer;
+}
+
+.mode-text {
+  font-family: Fira Sans, sans-serif;
+  font-size: larger !important;
+}
+
+.mode-text:hover {
+  color: white !important;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #097384;
+  min-width: 100%;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px !important;
+  position: absolute;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 105%;
+  left: 0;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: white !important;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #363f5a;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
