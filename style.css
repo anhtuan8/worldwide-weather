@@ -198,6 +198,11 @@ table .condition{
   color: white !important;
 }
 
+.row > div{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
 .button{
   width: 35%;
   background-color: #dedede ;
