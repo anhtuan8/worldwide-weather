@@ -2,11 +2,102 @@ body{
   font-family: Fira Sans, sans-serif;
 }
 .forecast-image {
-  background: url("images/Screenshot\ from\ 2019-10-14\ 09-39-39.png");
+  margin-top: 3rem;
+  background: url("/images/Screenshot\ from\ 2019-10-22\ 19-22-08.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   height: 60vh;
+}
+
+.monthly-image {
+  margin-top: 3rem;
+  background: url("/images/screencapture-127-0-0-1-5501-thoitiet-html-2019-10-22-20_05_22.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.global-image {
+  margin-top: 3rem;
+  background: url("/images/Screenshot\ from\ 2019-10-22\ 20-11-55.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+}
+
+.item1{
+  position: relative;
+  margin: 5rem auto;
+  padding-top: 3rem;
+}
+
+.item1::before{
+  text-align: center;
+  content: '1';
+  font-size: 37px;
+  color: white;
+  line-height: 58px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #69b6d5;
+}
+
+.item2{
+  position: relative;
+  margin: 5rem auto;
+  padding-top: 3rem;
+}
+
+.item2::before{
+  text-align: center;
+  content: '2';
+  font-size: 37px;
+  color: white;
+  line-height: 58px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #69b6d5;
+}
+
+.item3{
+  position: relative;
+  margin: 5rem auto;
+  padding-top: 3rem;
+}
+
+.item3::before{
+  text-align: center;
+  content: '3';
+  font-size: 37px;
+  color: white;
+  line-height: 58px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #69b6d5;
 }
 
 .header {
