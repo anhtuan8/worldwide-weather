@@ -1,8 +1,8 @@
-js();
-function js(){
-    document.getElementById('date-now').innerHTML = new Date();
+// js();
+// function js(){
+//     document.getElementById('date-now').innerHTML = new Date();
    
-}
+// }
 
 function getWeather(city) {
     $(document).ready(function() {
@@ -32,7 +32,7 @@ function getWeather(city) {
         htmltext += "<div class='city-name'>" + cityname + "</div>";
         htmltext += "<div class='time'>" + dto + "</div>";
         htmltext += "<div class = 'temp-box d-flex align-items-center justify-content-center'>";
-        htmltext += "<div><img src='http://openweathermap.org/img/wn/" +icon+ "@2x.png'> </div>"
+        htmltext += "<div><img src='http://openweathermap.org/img/wn/" +icon+ "@2x.png'> </div>";
         htmltext += '<div id="temp">' + temp + "&#176;C" + "</div>";
         htmltext += "</div>";
         htmltext += "<div class='info'>";

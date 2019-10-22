@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.now{
+  border-bottom: 2px white solid;
+}
+
 img.weather-icon {
   margin-bottom: 10px;
 }

@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.now{
+  border-bottom: 2px white solid;
+}
+
 ul {
     list-style-type: none;
     margin: 0;

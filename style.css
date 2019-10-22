@@ -15,6 +15,11 @@ table .temp-text{
   font-size: 2rem;
 }
 
+.result{
+  background-color: #f8f9fa!important;
+  border-radius: 3px;
+}
+
 td,th{
   border: 1px solid;
   text-align: center !important;
@@ -201,6 +206,10 @@ table .condition{
   color: white;
 }
 
+.now{
+  border-bottom: 2px white solid;
+}
+
 .button-container {
   background-color: #097384;
   border-radius: 30px;
@@ -235,6 +244,10 @@ table .condition{
   color: #097384 !important;
   border: none !important;
   padding: 0 !important;
+}
+
+.card{
+  background-color: #e5e6e7!important;
 }
 
 .loc-card{

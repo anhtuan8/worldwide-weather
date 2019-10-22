@@ -73,8 +73,6 @@ header h1 {
   /* Add the blur effect */
   /* filter: blur(8px);
     -webkit-filter: blur(8px); */
-
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
