@@ -76,7 +76,6 @@ table .condition{
   padding: 10px;
   cursor: pointer;
   background-color: #097384;
-  border-bottom: 1px solid #d4d4d4;
   color: white;
 }
 .autocomplete-items div:hover {
@@ -170,7 +169,22 @@ table .condition{
   height: 30px;
 }
 
+.onduty{
+  background-color: #363f5a;
+}
+
+.mode-col{
+  text-align: center;
+}
+
+.mode-col:hover{
+  background-color: #363f5a;
+  cursor: pointer;
+}
+
 .mode-bar{
+  padding-right: 0% !important;
+  padding-left: 0% !important;
   background-color: #097384;
   color: white;
 }
@@ -271,15 +285,16 @@ table .condition{
 }
 
 .dropdown-menu{
-  background-color: #097384 !important;
+  background-color: #363f5a !important;
 }
 
 .dropdown-menu > .dropdown-item{
   color: white;
 }
 
-.dropdown-menu:hover{
+.dropdown-item:hover{
   color: #343a40 !important;
+  background-color: #b4b4b4;
 }
 
 .location-text{
@@ -316,6 +331,10 @@ table .condition{
   /* padding-bottom: 1rem; */
 }
 
+.now{
+  border-bottom: 2px white solid;
+}
+
 .search_input {
   color: white;
   border: 0;
@@ -348,6 +367,7 @@ table .condition{
 }
 
 .row{
+  margin: auto 0 !important;
   font-size: small !important;
 }
 
@@ -424,7 +444,7 @@ h2 {
   text-align: center;
 }
 
-/* slideshow style */
+/* --------------slideshow style------------------- */
 .slideshow {
   box-sizing:border-box;
 }
@@ -439,34 +459,7 @@ h2 {
 .mySlides {
     display: none;
 }
-/* Định dạng nội dung Caption */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* định dạng các chấm chuyển đổi các slide */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-/* khi được hover, active đổi màu nền */
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Thêm hiệu ứng khi chuyển đổi các slide */
+/* Slide animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 2s;
@@ -485,4 +478,45 @@ h2 {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+/* Dropdown */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #097384;
+  min-width: 100%;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px !important;
+  position: absolute;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 105%;
+  left: 0;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: white !important;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #363f5a;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {
+  text-decoration: underline;
+  cursor: pointer;
 }

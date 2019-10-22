@@ -142,6 +142,10 @@ a{
   color: white !important;
 }
 
+.now{
+  border-bottom: 2px white solid;
+}
+
 .button{
   width: 35%;
   background-color: #dedede ;
