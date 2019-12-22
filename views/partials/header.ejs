@@ -1,0 +1,108 @@
+<!-- Navigation -->
+<nav
+  class="navbar navbar-expand-md navbar-light bg-light sticky-top border-bottom"
+>
+  <a class="navbar-brand nav-item" href="#"
+    ><img class="logo" src="../../images/ww_thumbnail.png"
+  /></a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <!--Home button-->
+    <a class="navbar-brand nav-item" href="#">
+      <div class="navbar-nav align-center d-flex justify-content-center">
+        <div class="button-container">
+          <button
+            type="button"
+            id="home_button"
+            class="button_icon btn btn-default align-center"
+          >
+            <i class="fas fa-home"></i>
+          </button>
+        </div>
+      </div>
+    </a>
+    <% if(tab==='home') { %>
+    <!--Search form-->
+    <div class="navbar-nav justify-content-center nav-item">
+      <div class="searchbar autocomplete button-container">
+        <input
+          class="search_input pl-4"
+          id="abc"
+          type="text"
+          name=""
+          placeholder="Enter location..."
+          required
+        />
+        <button
+          type="button"
+          id="search_button"
+          class="button_icon btn btn-default"
+          onclick="_forecast('abc')"
+        >
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <% }; %>
+  </div>
+  <div class="dropdown navbar-brand nav-item">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <i class="fas fa-cog btn-cog"></i>
+    </button>
+    <div
+      class="dropdown-menu dropdown-menu-right"
+      aria-labelledby="dropdownMenuButton"
+    >
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Weather Bar -->
+<div class="container-fluid weather-bar border-bottom" id="_weather-bar">
+  <div class="row m-1 justify-content-center">
+    <% cities.forEach(function(city) { %>
+    <div class="col-sm weather-col">
+      <span>
+        <img class="icon" src=<%="../../images/" + city.weather + ".jpg" %> />
+      </span>
+      <span class="location_text">
+        <%= city.name %> <%= city.degree %>&#176;C
+      </span>
+    </div>
+    <% }); %>
+  </div>
+</div>
+<!--Forecast Mode-->
+<div class="container-fluid mode-bar border-bottom" id="_mode-bar">
+  <div class="row ml-5">
+    <div class="col-sm-2 pt-2 pb-2">
+      <a href="/" class="mode-text description">
+        <i class="fas fa-home"></i>Home
+      </a>
+    </div>
+    <div class="col-sm-2 pt-2 pb-2" id= <%= tab==='home' ? "_nowTab" : "" %> >
+      <a href="/" class= "mode-text" >
+        Today
+      </a>
+    </div>
+    <div class="col-sm-2 pt-2 pb-2" id= <%= tab==='month' ? "_nowTab" : "" %> >
+      <a href="/hanoi/month" class="mode-text" >
+        Monthly
+      </a>
+    </div>
+    <div class="col-sm-2 pt-2 pb-2" id= <%= tab==='city' ? "_nowTab" : "" %> >
+      <a href="/hanoi" class="mode-text" >
+        City details
+      </a>
+    </div>
+  </div>
+</div>

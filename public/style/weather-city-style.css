@@ -1,0 +1,720 @@
+*{
+  box-sizing: border-box;
+}
+
+.now{
+  border-bottom: 2px white solid;
+}
+
+ul.nar, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+     /* overflow: hidden;  */
+}
+  
+  li {
+    float: left;
+    width: 16.66%;
+    border-right: 1px solid #d5d5d5 ;
+    background-color: #097384;
+    overflow: hidden; 
+    height: 50px;
+    margin: 0;
+  }
+
+  
+  li:hover{
+    background-color: #12bb20;
+    overflow: visible;
+  } 
+  li:hover a {
+    text-decoration: none;
+    color: #d2f315;
+  }
+  
+  .active{
+    text-decoration: none;
+    color: #d2f315;
+  }
+
+  li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+     overflow: hidden;
+     margin: 0;
+  }
+  
+  
+  .dropdown1{
+    background-color: #097384;
+    display: block;
+    color:  #12bb20;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    z-index: 2000;
+  }
+  
+  .dropdown1 a:hover{
+    background-color:#d2f315;
+  }
+  .dropdown1 a{
+    border-bottom: 1px solid #d5d5d5;
+    cursor: pointer;
+  }
+  .dropdown1 a:nth-last-child(1){
+    border: none;
+  }
+  .dropdown1 div{
+    margin: 0;
+  }
+  .clear-fix::after{
+      clear: both;
+      content: "";
+      display: table;
+      width: 100%;
+  }
+  .xem-map{
+    position: absolute;
+    padding: 5px;
+    width: 15%;
+    color: white;
+    font-family: Fira Sans, sans-serif;
+    font-size: large;
+    background-color: #097384;
+    border: none;
+    border-radius: 10px;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+  }
+  #carousel1 .item .details{
+    height: 100px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    
+  }
+  .xem-map:hover{
+    background-color: #343a40;
+  }
+  #carousel1 .item div{
+    height: 250px;
+  }
+  #carousel1 .item div img{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .item div{
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  
+  }
+  .item-title-row ul li{
+    /* box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3); */
+  }
+  .back-gr{
+    background-size: 100% 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    position: relative;
+  }
+  
+  .back-gr .back-gr-up{
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgb(196, 212, 201);
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: 1s ease;
+  }
+  .back-gr:hover .back-gr-up{
+    bottom: 0;
+    height: 100%;
+    opacity: 0.2;
+    transform: rotate(180deg);
+  }
+  .back-gr:hover button{
+    opacity: 1;
+  }
+  #hidden1,#hidden2{
+    visibility: hidden;
+   
+  }
+  
+  .back-gr button{
+    position: absolute;
+    background-color: #a4c707;
+    padding: 0.25em 0.5em;
+    border: none;
+    border-radius: 1em;
+    color: #0f9b26;
+    /* top: 0;
+    right: 0; */
+    opacity: 0;
+    transition-delay: 0.8s;
+    transition-duration: 0.0001s;
+    width: 20%;
+    border: 2px solid #d5d5d5;
+    font-weight: bold;
+    transform: translate(40%,40%);
+    cursor: pointer;
+    font-size: 0.7em;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: inherit;
+  }
+  @keyframes example{
+    0%{background-color:  #a4c707;}
+    50%{transform: translateY(-1px);}
+    100%{background-color:  #5a6d04;
+      transform: translateY(1px);}
+  }
+  .map_info{
+    height: 500px;
+    background-image: url('/images/van-mieu-mon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #city_name{
+     padding: 12px 0;
+      text-align: center;
+      font-size: 32px;
+  }
+  .weather-details{
+      font-size: 2em;
+      margin: 1em;
+  }
+  .div1{
+      float: left;
+      width: 45%;
+      height: 100%;
+      background-color: #3b5bdb;
+  }
+  .item-title{
+    font-size: 3em;
+    color: #097384;
+    font-family: Fira Sans, sans-serif;
+    text-align: center;
+    font-weight: bold;
+  }
+  .foot-ter{
+    float: left;
+    background-color: #b5e01c;
+    color: bisque;
+    width: 33.33333%;
+    text-align: center;
+    height: 210px;
+    bottom: 0;
+  }
+
+  .foot-ter .div{
+    width: 100%;
+    height: 30%;
+    padding: 0;
+    margin: 0;
+  }
+  .foot-ter .div11{
+    width: 100%;
+    height: 40%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item-title-row{
+    width: 49%;
+    float: left;
+    margin-right: 1%;
+
+    
+  }
+  @media only screen and (max-width: 800px) {
+    .foot-ter {
+      float: none;
+      width: 100%;
+    }
+    .item-title-row{
+      float: none;
+      width: 100%;
+      margin: 0;
+    }
+    .hov{
+      cursor: pointer;
+    }
+    ul.nar{
+      font-size: 0.7em;
+
+    }
+    .item-title-row .div70{
+      font-size: 1em;
+    }
+    .item-title-row .noibat li{
+      height: 20px;
+    }
+    .weather_info, .map_info{
+      float: none;
+      width: 100%;
+      height: 400px;
+      
+    }
+    .map_info{
+      margin: 0;
+      top: 1em;
+    }
+    
+  
+    
+    
+  }
+
+  @media only screen and (max-width: 600px){
+    ul.nar li{
+      float: none;
+      width: 100%;
+    }
+    ul.nar li a{
+      text-align: left;
+    }
+    ul.nar li:not(#home){
+      display: none;
+    }
+    ul:hover  li:not(#home){
+      display: block;
+    }
+    ul.nar:hover{
+      overflow: visible;
+    }
+    ul.nar li:hover{
+      overflow: visible;
+    }
+    ul.nar li a{
+      overflow: visible;
+    }
+    ul.nar li{
+      border-bottom: 1px solid #d5d5d5;
+      background-size: contain;
+    }
+
+  }
+
+  .details{
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    background-color:rgb(108, 109, 121);
+    color: black;
+    font-size: larger;
+    font-family: Fira Sans, sans-serif;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+  }
+
+  .details:hover{
+    background-color:#363f5a;
+    color: white;
+    cursor: pointer;
+  }
+.thanhhoa-weather,.nghean-weather,.hanam-weather,.namdinh-weather,.hatinh-weather{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  
+}
+/* .item:hover{
+  border: 3px solid red;
+  opacity: 1;
+} */
+
+.thanhhoa-weather{
+  background-image: url('/images/thanhhoa.jpg');
+}
+.nghean-weather{
+  background-image: url('/images/nghean.jpg');
+}
+.hatinh-weather{
+  background-image: url('/images/hatinh.jpg');
+}
+.namdinh-weather{
+  background-image: url('/images/namdinh.jpg');
+}
+.hanam-weather{
+  background-image: url('/images/hanam.jpg');
+}
+.content-text{
+  position: absolute;
+  color: red;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1em;
+  opacity: 1;
+}
+.item-title-row ul{
+  background-color: white;
+}
+.item-title-row li{
+  display: block;
+  float: none;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  /* background-color: rgb(119, 115, 115); */
+  background-image: linear-gradient(rgb(212, 223, 208),rgb(116, 126, 117));
+  font-family: Fira Sans, sans-serif;
+}
+.item-title-row li:hover{
+  background-color: #343a40;
+}
+.item-title-row li:hover .div70{
+  color: white;
+}
+.div30{
+  float: left;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+
+.div70{
+  float: left;
+  width: 60%;
+  color: black;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1em;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.nguon{
+  position: absolute;
+  bottom: 10px;
+  left: 0.1em;
+  font-size: 0.6em;
+  width: 40%;
+}
+.like-eye{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.5em;
+  width: 40%;
+}
+
+/*Tuan*/
+
+td{
+  -webkit-transition: background-color 0.4s ease-out;
+  -moz-transition: background-color 0.4s ease-out;
+  -o-transition: background-color 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
+}
+
+td:hover{
+  background-color: rgb(222, 226, 230); 
+}
+
+.mode-col>a{
+    color:white;
+}
+
+.navbar {
+  padding: 0.8rem;
+  padding-left: 2rem !important;
+}
+
+.navbar-brand{
+	padding-left: 0px !important;
+	margin-left: 0% !important;
+}
+.xem-them{
+  background-color: #146ec9;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  font-size: 1.1rem !important;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand{
+  background-image: url("/images/logo_white.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  height: 30px;
+}
+
+.mode-bar{
+  background-color: #097384;
+  color: white;
+}
+
+.mode-text{
+  font-family: Fira Sans, sans-serif;
+  font-size: larger !important;
+}
+
+.mode-text:hover{
+  color: white !important;
+}
+
+.button{
+  width: 12%;
+  padding: 15px;
+  background-color: #706d6d ;
+  color: black;
+  font-size: large !important;
+  border-radius: 30px !important;
+}
+
+.button:hover{
+  background-color: #363f5a !important;
+  color: white;
+}
+
+.anchor-button{
+  color: white;
+}
+
+.anchor-button:hover{
+  background-color: #363f5a !important;
+  color: white;
+}
+
+.button-container {
+  background-color: #097384;
+  border-radius: 30px;
+}
+
+.button-container:hover > .button_icon {
+  background: #363f5a !important;
+  /* color: #e74c3c; */
+  color: white;
+}
+
+.button_icon {
+  height: 40px;
+  width: 40px;
+  padding: 0% !important;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% !important;
+  color: white;
+  background-color: inherit;
+}
+
+.btn-cog{
+  font-size: 30px;
+  color: #097384;
+}
+
+.btn-secondary{
+  background-color: transparent !important;
+  color: #097384 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.city-time{
+  padding-top: 2rem;
+  font-family: Fira Sans, sans-serif;
+  font-size: large;
+  text-align: center;
+  color: white;
+}
+
+.city-name{
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+}
+
+.dropdown-menu{
+  background-color: #097384 !important;
+}
+
+.dropdown-menu > .dropdown-item{
+  color: white;
+}
+
+.dropdown-menu:hover{
+  color: #343a40 !important;
+}
+
+.location-text{
+	height: 30px;
+}
+
+.icon{
+	height: 40px;
+}
+
+.weather-col{
+	padding-left: 0px !important;
+}
+
+.heading{
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0.25rem 0;
+  /* padding-bottom: 1rem; */
+}
+
+.row{
+  font-size: small !important;
+}
+
+.weather-board{
+  /* background-color: #097384; */
+  background-image: linear-gradient(to bottom, #097384,#0eb7d1);
+  color: white;
+}
+
+.weather-bar {
+	padding: 0.3rem;
+	padding-left: 1.7rem !important;
+  background-color: white;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: bold;
+  color: #097384;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  margin: 0;
+}
+
+#dropdownMenuButton:hover > i{
+  color: #343a40 !important;
+}
+
+#_search {
+  padding: 50px;
+}
+
+#_weather {
+  /* color: #222; */
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0% !important;
+  padding: 0% !important;
+  font-family: Fira Sans, sans-serif;
+  
+}
+
+h2 {
+  text-align: center;
+}
+
+
+#temp {
+  font-size: 5rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.temp-box > div{
+  display: inline-block;
+}
+.botom-title{
+  width: 80%;
+  background-color: #097384;
+}
+.under{
+  background-color: #12bb20;
+}
+button.like{
+  width: 20px; 
+  height: 20px;
+  background-image: url('/images/like.png');
+  background-size: 100% 100%;
+  border: none;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+}
+button.view{
+  width: 20px; 
+  height: 20px;
+  background-image: url('/images/eye.png');
+  background-size: 100% 100%;
+  border: none;
+  border-radius: 20px;
+}
+.like_hidden{
+  position: absolute;
+  width: 20px; 
+  height: 20px;
+  background-image: url('/images/like.png');
+  background-size: 100% 100%;
+  border: none;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  top: 80%;
+  right: 23%;
+  display: none;
+
+}
+.class_info:hover .div30 img{
+  width: 120%;
+  height: 120%;
+}
+.div30 img{
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+}
+
+footer {
+  background-color: #097384 !important;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+/* forecast mode style */
+
+#_nowTab {
+  background-color: #363f5a;
+}
+
+.mode-text {
+  font-family: Fira Sans, sans-serif;
+  font-size: larger !important;
+  color: white !important;
+}
+
+.mode-text:hover {
+  color: white !important;
+}

@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Monthly</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+      type="text/css"
+    />
+    <!--local css-->
+    <link rel="stylesheet" href="/style/thoitiet-style.css" type="text/css"/>
+    <!--Online js jquery + boostrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <%- include ('./partials/header', {cities: [{name: 'Hanoi', degree:'29', weather: 'sunny'}, {name: 'Tokyo', degree: '20', weather:'gloomy'},{name:'London', degree:'25', weather:'rainy'},{name:'New York', degree: '26', weather:'cloudy+sunny'}], tab:'month'})%>
+    </header>
+    <!--City-->
+    <div class="city-time" id="_city"></div>
+
+    <!--Weather table-->
+    <div class="container align-items-center mt-3 mb-3">
+      <div class="row bo">
+        <table class="table table-bordered" id="sample_1">
+          <thead>
+            <tr>
+              <th>CN</th>
+              <th>T2</th>
+              <th>T3</th>
+              <th>T4</th>
+              <th>T5</th>
+              <th>T6</th>
+              <th>T7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="last-month">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    29/9
+                  </div>
+                  <div class="icon-container"></div>
+                  <div class="temp"></div>
+                  <div class="history-avg"></div
+                ></a>
+              </td>
+              <td class="last-month">
+                <a class="monthly-daypanel is-past">
+                  <div class="date">
+                    30/9
+                  </div>
+                </a>
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    1/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/12.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    2/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/14.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    3/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/18.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    4/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/3.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="xuongdong">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    5/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    6/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    7/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/2.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    8/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/12.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    9/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/14.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    10/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/18.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    11/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/3.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="xuongdong">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    12/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    13/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    14/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/2.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    15/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/12.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="today">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    16/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/14.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    17/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/18.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    18/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/3.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="xuongdong">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    19/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    20/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    21/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/2.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    22/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/12.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    23/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/14.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    24/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/18.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    25/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/3.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="xuongdong">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    26/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    27/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/6.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    28/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/2.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    29/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/12.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td>
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    30/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/14.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    31/10
+                  </div>
+                  <div class="icon-container">
+                    <img
+                      src="https://www.accuweather.com/images/weathericons/18.svg"
+                      width="64px"
+                      height="64px"
+                      class="weather-icon"
+                    />
+                    <div>
+                      Nhiệt độ thực
+                    </div>
+                  </div>
+                  <div class="temp">
+                    <div class="high">
+                      34°
+                    </div>
+                    <div class="low">
+                      /24°
+                    </div>
+                  </div>
+                  <div class="history-avg">
+                    <div>
+                      TB trong lịch sử
+                    </div>
+                    <div>30°/23°</div>
+                  </div></a
+                >
+              </td>
+              <td class="last-month">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    1/11
+                  </div>
+                  <div class="icon-container"></div>
+                  <div class="temp"></div>
+                  <div class="history-avg"></div
+                ></a>
+              </td>
+              <td class="xuongdong last-month">
+                <a class="monthly-daypanel is-past"
+                  ><div class="date">
+                    2/11
+                  </div>
+                  <div class="icon-container"></div>
+                  <div class="temp"></div>
+                  <div class="history-avg"></div
+                ></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid padding pt-2" id="ft">
+        <div class="row">
+          <div class="col-sm heading">Worldwide weather</div>
+          <div class="col-sm heading">
+            Information
+          </div>
+          <div class="col-sm heading">
+            Main Functions
+          </div>
+        </div>
+        <hr class="light m-2" />
+        <div class="row text-center">
+          <div class="col-md">
+            <p>
+              This is a website for checking weather forcast results of
+              locations all around the world. The features will be updated and
+              developed continuously. If you found this website helpful, please
+              share with your friends!
+            </p>
+          </div>
+
+          <div class="col-md">
+            <p>Team 22</p>
+            <p>UET, VNU</p>
+            <p>Hanoi Vietnam</p>
+          </div>
+
+          <div class="col-md">
+            <p>Weather forecast</p>
+            <p>Weather map</p>
+            <p>Destinations introduction</p>
+          </div>
+
+          <div class="col-md-12">
+            <hr class="light" />
+            <div>&copy; worldwideweather.org</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      $(window).on("load", function() {
+        getTime("Ha Noi");
+      });
+      function getTime(city) {
+        $(document).ready(function() {
+          var url =
+            "http://api.openweathermap.org/data/2.5/weather?units=metric&q=" +
+            city +
+            "&appid=18d8291a40a24cc8d3c7edc80d60a9a2";
+          // change the strings after "appid=" to your own application ID.
+          $.getJSON(url, function(data) {
+            cityname = data.name;
+            dto = new Date();
+            dto.setTime(Number(data.dt) * 1000);
+            var htmltext = "";
+            htmltext += "<div>";
+            htmltext += "<div class='city-name'>" + cityname + "</div>";
+            htmltext += "<div class='time'>" + dto + "</div>";
+            htmltext += "</div>";
+            var domwinfo = document.getElementById("_city");
+            domwinfo.innerHTML = htmltext;
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

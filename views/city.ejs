@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Details</title>
+    <!--Local js and css-->
+    <link rel="stylesheet" href="/style/weather-city-style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="owlcarousel/assets/owl.theme.default.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <%- include ('./partials/header', {cities: [{name: 'Hanoi', degree:'29', weather: 'sunny'}, {name: 'Tokyo', degree: '20', weather:'gloomy'},{name:'London', degree:'25', weather:'rainy'},{name:'New York', degree: '26', weather:'cloudy+sunny'}], tab:'city'})%>
+    </header>
+    <!--Weather-->
+    <div class="container-fluid weather-board mt-5">
+      <div class="clear-fix row">
+        <div class="col-sm-4 weather-info pt-5">
+          <ul class="mt-3 info" id="_weather"></ul>
+        </div>
+
+        <div class="map_info col-sm-8" title="Văn Miếu quốc tử giám">
+          <a
+            href="https://www.google.com/maps/place/H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i,
+                +Vi%E1%BB%87t+Nam/@21.022736,105.8019441,13z/data=!3m1!4b1!4m5!3m4!1s0x3135ab9bd9861ca1:0xe7887f7b72ca17a9!8m2!3d21.0277644!4d105.8341598"
+          >
+            <button class="xem-map">
+              <a target="_blank" href="https://www.google.com/maps/place/H%C3%A0+N%E1%BB%99i,+Ho%C3%A0n+Ki%E1%BA%BFm,+H%C3%A0+N%E1%BB%99i/@21.0227396,105.8369637,14z/data=!3m1!4b1!4m5!3m4!1s0x3135ab9bd9861ca1:0xe7887f7b72ca17a9!8m2!3d21.0277644!4d105.8341598?hl=vi" class="mode-text">Xem bản đồ </a>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-location"></div>
+    <br /><br />
+
+    <div style="margin: 4em;">
+      <script>
+        $(document).ready(function() {
+          $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+              0: {
+                items: 1,
+                autoplayTimeout: 2000
+              },
+              800: {
+                items: 2
+              },
+              1200: {
+                items: 3
+              }
+            }
+          });
+        });
+      </script>
+      <!--Dia diem du lich-->
+      <div class="item-title">Một số địa điểm du lịch tại Hà Nội</div>
+      <hr class="botom-title" />
+      <br />
+      <div class="owl-carousel owl-theme" id="carousel1">
+        <div class="item">
+          <div class="back-gr">
+            <div class="back-gr-up"></div>
+            <button class="way">Chỉ đường</button>
+          </div>
+          <button class="details">Hồ Hoàn Kiếm đẹp và lãng mạn ở Hà Nội</button>
+        </div>
+        <div class="item">
+          <div class="back-gr">
+            <div class="back-gr-up"></div>
+            <button class="way">Chỉ đường</button>
+          </div>
+          <button class="details">
+            Cầu Thê Húc được ví như một dải lụa đào
+          </button>
+        </div>
+        <div class="item">
+          <div class="back-gr">
+            <div class="back-gr-up"></div>
+            <button class="way">Chỉ đường</button>
+          </div>
+
+          <button class="details">
+            Chùa Một Cột với lối kiến trúc độc đáo, có 1 không 2 ở Hà Nội
+          </button>
+        </div>
+        <div class="item">
+          <div class="back-gr">
+            <div class="back-gr-up"></div>
+            <button class="way">Chỉ đường</button>
+          </div>
+          <button class="details">Khu quảng trường Ba Đình rộng lớn</button>
+        </div>
+        <div class="item">
+          <div class="back-gr">
+            <div class="back-gr-up"></div>
+            <button class="way">Chỉ đường</button>
+          </div>
+          <button class="details">
+            Lăng Bác là nơi uy nghiêm, trang trọng nhất của dân tộc Việt Nam
+          </button>
+        </div>
+      </div>
+
+      <!--Thong tin thoi tiet-->
+      <div class="mt-5" id="item-title1">
+        <div class="item-title">Thông tin thời tiết nổi bật</div>
+        <hr class="botom-title" />
+        <br />
+        <div class="item-title-row">
+          <ul class="noi-bat" id="row_1">
+            <li id="idinfo1" class="class_info">
+              <a
+                href="#item-title1"
+                style="height: 100%; width: 100%; padding: 0;"
+              >
+                <div class="div30">
+                  <img src="/images/Bao.jpg" />
+                </div>
+                <div class="div70">
+                  Cơn báo số 5 sắp đổ bổ vào biển Đông
+                  <div class="like_hidden"></div>
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like1">98</span>
+                    <button class="like" value="like1"></button>
+                    <span class="count-view1">120</span>
+                    <button class="view " value="view1"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" />
+            <li id="idinfo2" class="class_info">
+              <a href="#idinfo1" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="/images/nang.jpg" />
+                </div>
+                <div class="div70">
+                  Nắng nóng kéo dài tại miền Bắc có thể tới hết tuần
+                  <div class="like_hidden"></div>
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like2">100</span
+                    ><button class="like" value="like2"></button>
+                    <span class="count-view2">180</span>
+                    <button class="view" value="view2"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" />
+            <li id="idinfo3" class="class_info">
+              <a href="#idinfo2" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="/images/bui.jpg" />
+                </div>
+                <div class="div70">
+                  Không khí tại Thành Phố Hà Nội vượt nhiều lần tiêu chuẩn thế
+                  giới
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like3">50</span>
+                    <button class="like" value="like3"></button>
+                    <span class="count-view3">90</span>
+                    <button class="view" value="view3"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" />
+            <li id="idinfo4" class="class_info">
+              <a href="#idinfo3" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="/images/chay.jpg" />
+                </div>
+                <div class="div70">
+                  Cháy rừng do nắng nóng kéo dài tại Tây Nguyên
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like4">98</span>
+                    <button class="like" value="like4"></button>
+                    <span class="count-view4">120</span>
+                    <button class="view" value="view4"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" id="hidden1" />
+          </ul>
+        </div>
+        <div class="item-title-row clear-fix">
+          <ul id="row_2" class="noi-bat">
+            <li id="idinfo5" class="class_info">
+              <a
+                href="##item-title1"
+                style="height: 100%; width: 100%; padding: 0;"
+              >
+                <div class="div30">
+                  <img src="/images/lulut.jpg" />
+                </div>
+                <div class="div70">
+                  Lũ lụt lịch sử tại miền trung trong vòng 20 năm qua
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like5">20</span>
+                    <button class="like" value="like5"></button>
+                    <span class="count-view5">132</span>
+                    <button class="view" value="view5"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" />
+            <li id="idinfo6" class="class_info">
+              <a href="#idinfo5" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="/images/satdat.jpg" />
+                </div>
+                <div class="div70">
+                  Sạt lở đất nghiêm trọng tại các tỉnh miền núi phía Bắc do mưa
+                  lớn tuần qua
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like6">200</span>
+                    <button class="like" value="like6"></button>
+                    <span class="count-view6">120</span
+                    ><button class="view" value="view6"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" />
+            <li id="idinfo7" class="class_info">
+              <a href="#idinfo6" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="/images/lanh.jpg" />
+                </div>
+                <div class="div70">
+                  Miền Bắc chuẩn bị đón đợt không khí lạnh đầu mùa vào cuối tuần
+                  <div class="nguon"></div>
+                  <div class="like-eye">
+                    <span class="count-like7">70</span
+                    ><button class="like" value="like7"></button>
+                    <span class="count-view7">152</span
+                    ><button class="view" value="view7"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" />
+            <li id="idinfo8" class="class_info">
+              <a href="#idinfo7" style="height: 100%; width: 100%; padding: 0;">
+                <div class="div30">
+                  <img src="/images/mattroi.jpg" />
+                </div>
+                <div class="div70">
+                  Nguyệt thực xuất hiện có thể quan sát được
+                  <div class="nguon"></div>
+
+                  <div class="like-eye">
+                    <span class="count-like8">7</span>
+                    <button class="like" value="like8"></button>
+                    <span class="count-view8">32</span>
+                    <button class="view" value="view8"></button>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <hr class="under" id="hidden2" />
+          </ul>
+        </div>
+      </div>
+      <br />
+      <p style="text-align: center; width: 100%; " id="viewup">
+        <a href="#idinfo4" class="btn button description " style="width: 150px">
+          Xem thêm
+        </a>
+      </p>
+      <div id="test_demo"></div>
+      <br /><br />
+      <div class="item-title">Thời tiết của một số tỉnh lân cận</div>
+      <hr class="botom-title" />
+      <br />
+      <!-- Set up your HTML -->
+      <div class="owl-carousel owl-theme" id="carousel1">
+        <div class="item">
+          <div class="thanhhoa-weather">
+            <div class="back-gr">
+              <div class="back-gr-up"></div>
+            </div>
+          </div>
+          <button class="details">
+            Thanh Hóa mưa dông trên diện rộng kèm theo gió lốc
+          </button>
+        </div>
+        <div class="item">
+          <div class="nghean-weather">
+            <div class="back-gr">
+              <div class="back-gr-up"></div>
+            </div>
+          </div>
+          <button class="details">
+            Nghệ An nắng nóng kéo dài có khả năng cháy cao
+          </button>
+        </div>
+        <div class="item">
+          <div class="namdinh-weather">
+            <div class="back-gr">
+              <div class="back-gr-up"></div>
+            </div>
+          </div>
+          <button class="details">
+            Nam Định nắng nhẹ nhiệt độ tương đối thời tiết đẹp
+          </button>
+        </div>
+        <div class="item">
+          <div class="hanam-weather">
+            <div class="back-gr">
+              <div class="back-gr-up"></div>
+            </div>
+          </div>
+          <button class="details">
+            Hà Nam mưa lớn do ảnh hưởng của bão số 6 đổ bộ
+          </button>
+        </div>
+        <div class="item">
+          <div class="hatinh-weather">
+            <div class="back-gr">
+              <div class="back-gr-up"></div>
+            </div>
+          </div>
+          <button class="details">
+            Hà Tĩnh mưa rông rải rác kèm theo nắng gián đoạn
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <%- include ('./partials/footer') %>
+    </footer>
+    <script src="/script/weather-city-script.js"></script>
+    <script>
+      $(window).on("load", function() {
+        getWeather("Ha Noi");
+      });
+    </script>
+  </body>
+</html>
